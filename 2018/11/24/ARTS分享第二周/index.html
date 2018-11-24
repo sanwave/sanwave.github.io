@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>ARTS分享第二周 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Algorithmhttps://leetcode.com/problems/add-two-numbers/discuss/197409/C%2B%2B-implementation Reviewhttps://media.netflix.com/en/company-blog/see-whats-next-on-tv 因自己从事流媒体后台开发，所以也关注电视播放的产品相关体验。这篇文章介绍了N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS分享第二周">
+<meta property="og:url" content="http://yoursite.com/2018/11/24/ARTS分享第二周/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Algorithmhttps://leetcode.com/problems/add-two-numbers/discuss/197409/C%2B%2B-implementation Reviewhttps://media.netflix.com/en/company-blog/see-whats-next-on-tv 因自己从事流媒体后台开发，所以也关注电视播放的产品相关体验。这篇文章介绍了N">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-24T13:59:12.790Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS分享第二周">
+<meta name="twitter:description" content="Algorithmhttps://leetcode.com/problems/add-two-numbers/discuss/197409/C%2B%2B-implementation Reviewhttps://media.netflix.com/en/company-blog/see-whats-next-on-tv 因自己从事流媒体后台开发，所以也关注电视播放的产品相关体验。这篇文章介绍了N">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ARTS分享第二周" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/24/ARTS分享第二周/" class="article-date">
+  <time datetime="2018-11-24T13:45:50.000Z" itemprop="datePublished">2018-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ARTS分享第二周
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><a href="https://leetcode.com/problems/add-two-numbers/discuss/197409/C%2B%2B-implementation" target="_blank" rel="noopener">https://leetcode.com/problems/add-two-numbers/discuss/197409/C%2B%2B-implementation</a></p>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><a href="https://media.netflix.com/en/company-blog/see-whats-next-on-tv" target="_blank" rel="noopener">https://media.netflix.com/en/company-blog/see-whats-next-on-tv</a></p>
+<p>因自己从事流媒体后台开发，所以也关注电视播放的产品相关体验。<br>这篇文章介绍了Netflix一直致力于研究更简单、更直观、更有趣的视频播放操作接口，使用户能将更多的精力放在关注的内容上。Netflix最近发布了一版新的操作接口，测试发现确实离上述目标更近了一步，之后也会朝上述目标而努力。<br>然并卵，我手上并没有Netflix的盒子。<br>另外文章还提到一点：当用户不确定要看什么内容时，通常是因为他们还沉浸在看过的一部电视剧或电影中（太有道理了，至少对我如此）。</p>
+<h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><p>想必大家都实现过Tcp的服务器，肯定遇到过”Address already in use”的错误，原因见下面的摘抄：</p>
+<blockquote>
+<p>之前连接到客户端的服务器要么通过close(),要么是因为崩溃（例如被信号杀死）而执行了一个主动关闭。这就使得TCP节点将处于TIME_WAIT状态，直到2倍的MSL超时过期为止。<br>之前，服务器先创建一个子进程来处理客户端的链接。稍后，服务器终止，而子进程继续服务客户端，因而使得维护的TCP节点使用了服务器的知名端口号（well-known port）。</p>
+</blockquote>
+<p>以上两种情况如果监听socket未使用SO_REUSEADDR选项将会出现上面的报错。但今天我们要说的是UNIX socket服务器，即使使用SO_REUSEADDR选项仍遇到了前面的问题！<br>原因是UNIX socket监听后会创建一个同路径的物理文件（尚未研究这个文件的用处），再次监听时若该文件存在则会报“Address already in use”的错误，处理方法则是每次监听前将该文件删除。</p>
+<p>答案来自<a href="https://stackoverflow.com/questions/17451971/getting-address-already-in-use-error-using-unix-socket" target="_blank" rel="noopener">https://stackoverflow.com/questions/17451971/getting-address-already-in-use-error-using-unix-socket</a></p>
+<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><h1 id="快速构建Android-NDK环境（服务器开发角度）"><a href="#快速构建Android-NDK环境（服务器开发角度）" class="headerlink" title="快速构建Android NDK环境（服务器开发角度）"></a>快速构建Android NDK环境（服务器开发角度）</h1><h2 id="系统环境为CentOS-6-7"><a href="#系统环境为CentOS-6-7" class="headerlink" title="系统环境为CentOS 6/7"></a>系统环境为CentOS 6/7</h2><h2 id="Python环境"><a href="#Python环境" class="headerlink" title="Python环境"></a>Python环境</h2><ul>
+<li>将Python升级为2.7。此处略过升级过程。</li>
+<li>安裝pip，从<a href="https://bootstrap.pypa.io/get-pip.py下载文件并执行，即可完成安装" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py下载文件并执行，即可完成安装</a></li>
+</ul>
+<h2 id="安装android-ndk"><a href="#安装android-ndk" class="headerlink" title="安装android-ndk"></a>安装android-ndk</h2><ul>
+<li>在<a href="https://developer.android.com/ndk/downloads/?hl=zh-cn下载android-ndk包，并解压至/usr/local目录。" target="_blank" rel="noopener">https://developer.android.com/ndk/downloads/?hl=zh-cn下载android-ndk包，并解压至/usr/local目录。</a><br>不同版本的NDK包应该只是支持的ABI不同，我使用的是android-ndk-r15c-linux-x86_64.zip。<br>官方说明： <a href="https://developer.android.com/ndk/guides/setup?hl=zh-cn" target="_blank" rel="noopener">https://developer.android.com/ndk/guides/setup?hl=zh-cn</a></li>
+</ul>
+<h2 id="构建特定平台的独立工具链"><a href="#构建特定平台的独立工具链" class="headerlink" title="构建特定平台的独立工具链"></a>构建特定平台的独立工具链</h2><ul>
+<li>打开/usr/local/android-ndk-r15c/build/tools/make-standalone-toolchain.sh文件，在“run python”行的命令结尾添加“–deprecated-headers”选项，否则编译时可能会报“error: undefined reference to ‘stderr’”错误，该问题在<a href="https://github.com/openssl/openssl/issues/3826有讨论。" target="_blank" rel="noopener">https://github.com/openssl/openssl/issues/3826有讨论。</a><br>事实上，上面的脚本只是同目录下的make_standalone_toolchain.py脚本的wrapper，如果前者执行失败，可直接运行后者脚本分析原因。<br>构建工具链时需要指定ARM的ABI，通常来说armeabi是兼容性最好的，而armeabi-v7a、arm64-v8a则是针对对应平台优化性能的版本。我用的是armeabi。</li>
+<li>关于安卓API版本的选择，不要选太低，16以下不支持libm库（math），21以下无法编译GDB。这里我们使用21。</li>
+<li>参考命令：/usr/local/android-ndk-r15c/build/tools/make-standalone-toolchain.sh –arch=arm –platform=android-21 –install-dir=/usr/local/android-toolchain-arm-api21 –force</li>
+<li>更多信息详见官方说明：<a href="https://developer.android.com/ndk/guides/standalone_toolchain" target="_blank" rel="noopener">https://developer.android.com/ndk/guides/standalone_toolchain</a></li>
+</ul>
+<h2 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h2><ul>
+<li>在/etc/profile文件中添加如下内容，然后执行source /etc/profile以立即生效：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ANDROID_NDK=/usr/local/android-ndk-r15c</span><br><span class="line">ANDROID_STANDALONE_TOOLCHAIN=/usr/local/android-toolchain-arm-api21</span><br><span class="line">PATH=$&#123;PATH&#125;:$&#123;ANDROID_NDK&#125;/bin:$&#123;ANDROID_STANDALONE_TOOLCHAIN&#125;/bin</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>到这里Android NDK编译环境已经搭建完成，我们已经可以编译程序在Android环境上运行了。但是，官方提供的GDB只能通过ADB远程调试，无法在线调试。所以，我们需要重新编译适用于Android的GDB。<br>下面以编译GDB的32位版本为例，介绍如何使用工具链：</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>安装gcc、gcc-c++</p>
+<h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><ul>
+<li><p>readline/complete.c文件，将setpwent调用改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#if defined (HAVE_GETPWENT)</span><br><span class="line">    setpwent ();</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sim/common/sim-events.h头文件内包含sim-utils.h头文件</p>
+</li>
+<li>sim/aarch64/cpustate.h头文件内包含sim-base.h头文件</li>
+<li>gdb/linux-thread-db.c文件中注释这一行th.th_unique = 0;</li>
+<li>gdb/gdbserver/tracepoint.c文件的7348行添加#undef gettimeofday</li>
+<li><p>/usr/local/android-toolchain-arm-api21/sysroot/usr/include/linux/ptrace.h文件中添加：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PT_GETREGS PTRACE_GETREGS <span class="comment">// 12</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PT_SETREGS PTRACE_SETREGS <span class="comment">// 13</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PT_GETFPREGS PTRACE_GETFPREGS <span class="comment">// 14</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PT_SETFPREGS PTRACE_SETFPREGS <span class="comment">// 15</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PT_SYSCALL PTRACE_SYSCALL <span class="comment">// android is 23, linux is 24</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>/usr/local/android-toolchain-arm-api21/sysroot/usr/include/elf.h文件临时将Elf32_auxv_t、Elf64_auxv_t结构体改名（比如加个后缀），否则编译会因命名冲突报错。</p>
+</li>
+<li><p>gdb需要search.h头文件，21以上的api才有，这里需要使用api21的工具链编译。</p>
+</li>
+<li><p>编译<br>终于到编译这一步了！<br>./configure CC=/usr/local/android-toolchain-arm-api21/bin/arm-linux-androideabi-gcc CXX=/usr/local/android-toolchain-arm-api21/bin/arm-linux-androideabi-g++ CFLAGS=”-g -O2 -pie -fPIE” LDFLAGS=”-pie -fPIE” –prefix=/opt/GDB –host=arm-linux-androideabi –target=arm-linux-androideabi –program-prefix=arm-linux –without-x –disable-gdbtk –disable-tui<br>make<br>make install</p>
+</li>
+</ul>
+<p>恭喜，到这里你已经完成gdb的编译了。将二进制文件/opt/GDB/arm-linuxgdb拷贝到android上即可在线调试了。<br>注意：32位版本的gdb无法调试64位程序！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/24/ARTS分享第二周/" data-id="cjovje0zv0000xkinm5kqwnd0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/24/ARTS分享第二周/">ARTS分享第二周</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/24/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
